@@ -3,18 +3,15 @@ nav a.active{
   color: red;
 }
 
-.card{
-}
 
 .card:hover .overlay {
   top: 0;
-  /*height: 41.5%;*/
-  /*height: card-img-top%;*/
+  height: 100%;
 }
 
 .overlay {
   position: absolute;
-  bottom: 58.5%;
+  top: 0;
   left: 0;
   right: 0;
   background-color: #008CBA;
@@ -36,7 +33,23 @@ nav a.active{
   -ms-transform: translate(-50%, -50%);
 }
 
-.image {
+.card:hover .image-overlay {
+  opacity: 1;
+}
+
+.card-image {
+  position: relative;
+}
+
+.image-overlay {
   position: absolute;
-  transform: translate(-50%, -50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgba(0, 0, 0, 0.5);
 }
